@@ -1,0 +1,13 @@
+# NAME: Grok
+# DESC: Grok / xAI
+# REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
+# UPDATED: 2026-11-04
+# HOST-SUFFIX: 4
+# TOTAL: 4
+# SOURCES: VPSDance/ai-proxy-rules, v2fly/domain-list-community
+# NOTE: Tesla deliberately excluded
+#
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grok.x.com
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN-SUFFIX,x.ai
