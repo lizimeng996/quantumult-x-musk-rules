@@ -1,0 +1,11 @@
+# NAME: Cursor
+# AUTHOR: lizimeng996
+# REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
+# UPDATED: 2026-11-04 20:14:37
+# HOST-SUFFIX: 5
+# TOTAL: 5
+HOST-SUFFIX,cursor-cdn.com,Cursor
+HOST-SUFFIX,cursor.com,Cursor
+HOST-SUFFIX,cursor.sh,Cursor
+HOST-SUFFIX,cursorapi.com,Cursor
+HOST-SUFFIX,cursorvm.com,Cursor

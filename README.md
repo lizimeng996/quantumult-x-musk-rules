@@ -10,11 +10,12 @@
 
 | 文件 | 用途 | 订阅地址 |
 | --- | --- | --- |
-| `QuantumultX/X.list` | **合集（推荐）**：Grok/xAI + X/推特 + SpaceX/星链 + 推特 IP | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list |
+| `QuantumultX/X.list` | **合集（推荐）**：Grok/xAI + X/推特 + SpaceX/星链 + Cursor（Grok Bot）+ 推特 IP | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list |
 | `QuantumultX/Grok.list` | 只含 Grok / xAI | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Grok.list |
 | `QuantumultX/Twitter.list` | 只含 X / 推特（含 IP 段） | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Twitter.list |
 | `QuantumultX/SpaceX.list` | 只含 SpaceX / 星链 / Starshield | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/SpaceX.list |
-| `Loon/*.list` | 上面四个的 Loon 版 | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/X.list 等 |
+| `QuantumultX/Cursor.list` | 只含 Cursor / Grok Bot（cursor.com、cursor.sh 等） | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Cursor.list |
+| `Loon/*.list` | 上面五个的 Loon 版 | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/X.list 等 |
 
 `raw.githubusercontent.com` 在国内拉不下来时，换成 jsdelivr：`https://cdn.jsdelivr.net/gh/lizimeng996/quantumult-x-musk-rules@main/QuantumultX/X.list`（其它文件同理）。
 

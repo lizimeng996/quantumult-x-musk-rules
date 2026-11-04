@@ -169,6 +169,9 @@ def safe(label, fn, default):
         return default
 
 
+CURSOR_MANUAL = [("HOST-SUFFIX", d) for d in ("cursor.com", "cursor.sh", "cursor-cdn.com", "cursorapi.com", "cursorvm.com")]
+
+
 def main():
     bm7 = safe("blackmatrix7 Twitter", lambda: parse_rules(fetch(BM7_TWITTER)), [])
     grok_src = GROK_CORE + safe("VPSDance x-ai", lambda: parse_rules(fetch(VPSD_XAI)), []) + safe("v2fly xai", lambda: v2fly("xai"), [])
@@ -188,6 +191,7 @@ def main():
     grok = sorted({r for r in grok_src if valid(r)}, key=sort_key)
     xr = normalise(x_src, parents=set(grok) - {("HOST-SUFFIX", "grok.x.com")})
     sp = normalise(sp_src)
+    cur = normalise(CURSOR_MANUAL + safe("v2fly cursor", lambda: v2fly("cursor"), []))
     ips = normalise(ip_src)
     if len(grok) < 3 or len(xr) < 15 or len(sp) < 2 or len(ips) < 3:
         sys.exit(f"ERROR: too few rules grok={len(grok)} x={len(xr)} spacex={len(sp)} ip={len(ips)}")
@@ -196,13 +200,14 @@ def main():
     xfull = normalise(x_src + ip_src)
     write("Grok", "Grok / xAI", [("Grok / xAI", grok)], srcs[:1] + srcs[2:3])
     write("Twitter", "X / Twitter domains + Twitter IP ranges", [("X / Twitter", xfull)], srcs[1:4])
+    write("Cursor", "Cursor / Grok Bot", [("Cursor", cur)], srcs[2:3] + srcs[4:])
     write("SpaceX", "SpaceX / Starlink / Starshield", [("SpaceX / Starlink", sp)], srcs[2:3] + srcs[4:])
     total = write("X", "X 全家: Grok/xAI + X/Twitter + SpaceX/Starlink + Twitter IPs (no Tesla)",
-                  [("Grok / xAI", grok), ("X / Twitter", xr), ("SpaceX / Starlink", sp), ("Twitter IP", ips)], srcs)
+                  [("Grok / xAI", grok), ("X / Twitter", xr), ("SpaceX / Starlink", sp), ("Cursor", cur), ("Twitter IP", ips)], srcs)
     bad = validate()
     if bad:
         sys.exit("INVALID LINES:\n" + "\n".join(bad))
-    print(f"OK: X.list={total} (grok={len(grok)} x={len(xr)} spacex={len(sp)} ip={len(ips)})")
+    print(f"OK: X.list={total} (grok={len(grok)} x={len(xr)} spacex={len(sp)} cursor={len(cur)} ip={len(ips)})")
 
 
 if __name__ == "__main__":

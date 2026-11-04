@@ -1,14 +1,19 @@
 # NAME: X
 # AUTHOR: lizimeng996
 # REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
-# UPDATED: 2026-11-04 19:12:04
-# HOST-SUFFIX: 33
+# UPDATED: 2026-11-04 20:14:37
+# HOST-SUFFIX: 38
 # IP-CIDR: 12
 # IP6-CIDR: 3
 # IP-ASN: 1
-# TOTAL: 49
+# TOTAL: 54
 HOST-SUFFIX,ads-twitter.com,X
 HOST-SUFFIX,cms-twdigitalassets.com,X
+HOST-SUFFIX,cursor-cdn.com,X
+HOST-SUFFIX,cursor.com,X
+HOST-SUFFIX,cursor.sh,X
+HOST-SUFFIX,cursorapi.com,X
+HOST-SUFFIX,cursorvm.com,X
 HOST-SUFFIX,grok.com,X
 HOST-SUFFIX,grok.x.com,X
 HOST-SUFFIX,grokipedia.com,X

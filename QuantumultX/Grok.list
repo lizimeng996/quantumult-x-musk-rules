@@ -1,7 +1,7 @@
 # NAME: Grok
 # AUTHOR: lizimeng996
 # REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
-# UPDATED: 2026-11-04 19:12:04
+# UPDATED: 2026-11-04 20:14:37
 # HOST-SUFFIX: 4
 # TOTAL: 4
 HOST-SUFFIX,grok.com,Grok
