@@ -7,6 +7,6 @@
 # SOURCES: v2fly/domain-list-community, manual
 # NOTE: Tesla deliberately excluded
 #
-HOST-SUFFIX,spacex.com,SpaceX
-HOST-SUFFIX,starlink.com,SpaceX
-HOST-SUFFIX,starshield.com,SpaceX
+HOST-SUFFIX,spacex.com,PROXY
+HOST-SUFFIX,starlink.com,PROXY
+HOST-SUFFIX,starshield.com,PROXY

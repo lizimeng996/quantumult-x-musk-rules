@@ -139,7 +139,7 @@ def write(name, desc, sections, sources):
         for title, rs in sections:
             if len(sections) > 1:
                 body.append(f"# ===== {title} ({len(rs)}) =====")
-            body += [fmt(t, v, name, loon) for t, v in rs]
+            body += [fmt(t, v, "PROXY", loon) for t, v in rs]
         (ROOT / d).mkdir(exist_ok=True)
         (ROOT / d / f"{name}.list").write_text("\n".join(header(name, desc, allr, sources) + body) + "\n")
     return len(allr)

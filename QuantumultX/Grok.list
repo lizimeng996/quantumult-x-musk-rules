@@ -7,7 +7,7 @@
 # SOURCES: VPSDance/ai-proxy-rules, v2fly/domain-list-community
 # NOTE: Tesla deliberately excluded
 #
-HOST-SUFFIX,grok.com,Grok
-HOST-SUFFIX,grok.x.com,Grok
-HOST-SUFFIX,grokipedia.com,Grok
-HOST-SUFFIX,x.ai,Grok
+HOST-SUFFIX,grok.com,PROXY
+HOST-SUFFIX,grok.x.com,PROXY
+HOST-SUFFIX,grokipedia.com,PROXY
+HOST-SUFFIX,x.ai,PROXY
