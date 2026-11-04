@@ -4,7 +4,7 @@ Tesla is deliberately EXCLUDED (Tesla China must go direct). Standard library on
 Usage: python3 scripts/build.py
 """
 import ipaddress, json, re, sys, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,10 +120,10 @@ def header(name, desc, rules, sources):
     counts = {}
     for t, _ in rules:
         counts[t] = counts.get(t, 0) + 1
-    h = [f"# NAME: {name}", f"# DESC: {desc}", f"# REPO: {REPO}",
-         f"# UPDATED: {datetime.now(timezone.utc).strftime('%Y-%m-%d')}"]
+    h = [f"# NAME: {name}", "# AUTHOR: lizimeng996", f"# REPO: {REPO}",
+         f"# UPDATED: {datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M:%S')}"]
     h += [f"# {t}: {counts[t]}" for t in sorted(counts, key=ORDER.get)]
-    return h + [f"# TOTAL: {len(rules)}", "# SOURCES: " + ", ".join(sources), "# NOTE: Tesla deliberately excluded", "#"]
+    return h + [f"# TOTAL: {len(rules)}"]
 
 
 def fmt(t, v, name, loon):
@@ -133,13 +133,9 @@ def fmt(t, v, name, loon):
 
 
 def write(name, desc, sections, sources):
-    allr = [r for _, rs in sections for r in rs]
+    allr = sorted({r for _, rs in sections for r in rs}, key=lambda r: (ORDER[r[0]], r[1]))
     for loon, d in ((False, "QuantumultX"), (True, "Loon")):
-        body = []
-        for title, rs in sections:
-            if len(sections) > 1:
-                body.append(f"# ===== {title} ({len(rs)}) =====")
-            body += [fmt(t, v, "PROXY", loon) for t, v in rs]
+        body = [fmt(t, v, name, loon) for t, v in allr]
         (ROOT / d).mkdir(exist_ok=True)
         (ROOT / d / f"{name}.list").write_text("\n".join(header(name, desc, allr, sources) + body) + "\n")
     return len(allr)

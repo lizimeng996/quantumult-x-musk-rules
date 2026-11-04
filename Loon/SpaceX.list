@@ -1,12 +1,9 @@
 # NAME: SpaceX
-# DESC: SpaceX / Starlink / Starshield
+# AUTHOR: lizimeng996
 # REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
-# UPDATED: 2026-11-04
+# UPDATED: 2026-11-04 18:05:33
 # HOST-SUFFIX: 3
 # TOTAL: 3
-# SOURCES: v2fly/domain-list-community, manual
-# NOTE: Tesla deliberately excluded
-#
 DOMAIN-SUFFIX,spacex.com
 DOMAIN-SUFFIX,starlink.com
 DOMAIN-SUFFIX,starshield.com

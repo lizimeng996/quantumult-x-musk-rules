@@ -1,15 +1,12 @@
 # NAME: X
-# DESC: X / Twitter domains + Twitter IP ranges
+# AUTHOR: lizimeng996
 # REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
-# UPDATED: 2026-11-04
+# UPDATED: 2026-11-04 18:05:33
 # HOST-SUFFIX: 27
 # IP-CIDR: 12
 # IP6-CIDR: 3
 # IP-ASN: 1
 # TOTAL: 43
-# SOURCES: blackmatrix7/ios_rule_script, v2fly/domain-list-community, RIPEstat (AS13414)
-# NOTE: Tesla deliberately excluded
-#
 DOMAIN-SUFFIX,ads-twitter.com
 DOMAIN-SUFFIX,cms-twdigitalassets.com
 DOMAIN-SUFFIX,grok.com
@@ -37,8 +34,6 @@ DOMAIN-SUFFIX,twttr.net
 DOMAIN-SUFFIX,twvid.com
 DOMAIN-SUFFIX,vine.co
 DOMAIN-SUFFIX,x.com
-IP-CIDR,64.63.0.0/18,no-resolve
-IP-CIDR,69.195.160.0/19,no-resolve
 IP-CIDR,103.252.112.0/22,no-resolve
 IP-CIDR,104.244.42.0/24,no-resolve
 IP-CIDR,104.244.44.0/22,no-resolve
@@ -49,6 +44,8 @@ IP-CIDR,199.59.148.0/22,no-resolve
 IP-CIDR,199.96.56.0/21,no-resolve
 IP-CIDR,202.160.128.0/22,no-resolve
 IP-CIDR,209.237.192.0/19,no-resolve
+IP-CIDR,64.63.0.0/18,no-resolve
+IP-CIDR,69.195.160.0/19,no-resolve
 IP-CIDR6,2400:6680:f000::/36,no-resolve
 IP-CIDR6,2606:1f80:f000::/36,no-resolve
 IP-CIDR6,2a04:9d40:f000::/36,no-resolve

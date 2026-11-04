@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Quant
 https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Musk.list, tag=Musk, force-policy=代理, update-interval=86400, opt-parser=false, enabled=true
 ```
 
-规则行末尾统一写 `PROXY`（圈叉内置策略，不会报“未知策略”），只是占位，实际走哪个节点由 `force-policy` 决定。
+格式与 blackmatrix7 一致：规则行末尾写列表名（如 `Musk`、`X`），订阅时请用 `force-policy=` 指定你实际的策略组，否则圈叉会报“未知策略”。
 
 ## Loon 用法
 
