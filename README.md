@@ -10,13 +10,13 @@
 
 | 文件 | 用途 | 订阅地址 |
 | --- | --- | --- |
-| `QuantumultX/Musk.list` | **合集（推荐）**：Grok/xAI + X/推特 + SpaceX/星链 + 推特 IP | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Musk.list |
+| `QuantumultX/X.list` | **合集（推荐）**：Grok/xAI + X/推特 + SpaceX/星链 + 推特 IP | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list |
 | `QuantumultX/Grok.list` | 只含 Grok / xAI | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Grok.list |
-| `QuantumultX/X.list` | 只含 X / 推特（含 IP 段） | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list |
+| `QuantumultX/Twitter.list` | 只含 X / 推特（含 IP 段） | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Twitter.list |
 | `QuantumultX/SpaceX.list` | 只含 SpaceX / 星链 / Starshield | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/SpaceX.list |
-| `Loon/*.list` | 上面四个的 Loon 版 | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/Musk.list 等 |
+| `Loon/*.list` | 上面四个的 Loon 版 | https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/X.list 等 |
 
-`raw.githubusercontent.com` 在国内拉不下来时，换成 jsdelivr：`https://cdn.jsdelivr.net/gh/lizimeng996/quantumult-x-musk-rules@main/QuantumultX/Musk.list`（其它文件同理）。
+`raw.githubusercontent.com` 在国内拉不下来时，换成 jsdelivr：`https://cdn.jsdelivr.net/gh/lizimeng996/quantumult-x-musk-rules@main/QuantumultX/X.list`（其它文件同理）。
 
 合集文件里用 `# ===== 分组 =====` 注释分段，文件开头有各类规则条数和更新日期。
 
@@ -32,23 +32,23 @@
 
 ```ini
 [filter_remote]
-https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Musk.list, tag=Musk, force-policy=美国节点, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list, tag=X, force-policy=美国节点, update-interval=86400, opt-parser=false, enabled=true
 ```
 
-想让 Grok 单独走一个节点，就把 `Grok.list` 放在 `Musk.list` **上面**：
+想让 Grok 单独走一个节点，就把 `Grok.list` 放在 `X.list` **上面**：
 
 ```ini
 https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Grok.list, tag=Grok, force-policy=美国节点, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/Musk.list, tag=Musk, force-policy=代理, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/QuantumultX/X.list, tag=X, force-policy=代理, update-interval=86400, opt-parser=false, enabled=true
 ```
 
-格式与 blackmatrix7 一致：规则行末尾写列表名（如 `Musk`、`X`），订阅时请用 `force-policy=` 指定你实际的策略组，否则圈叉会报“未知策略”。
+格式与 blackmatrix7 一致：规则行末尾写列表名（如 `X`、`Twitter`），订阅时请用 `force-policy=` 指定你实际的策略组，否则圈叉会报“未知策略”。
 
 ## Loon 用法
 
 ```ini
 [Remote Rule]
-https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/Musk.list, policy=美国节点, tag=Musk, enabled=true
+https://raw.githubusercontent.com/lizimeng996/quantumult-x-musk-rules/main/Loon/X.list, policy=美国节点, tag=X, enabled=true
 ```
 
 ## 和其他规则冲突吗

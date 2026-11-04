@@ -1,17 +1,22 @@
 # NAME: X
 # AUTHOR: lizimeng996
 # REPO: https://github.com/lizimeng996/quantumult-x-musk-rules
-# UPDATED: 2026-11-04 18:05:33
-# HOST-SUFFIX: 27
+# UPDATED: 2026-11-04 19:12:04
+# HOST-SUFFIX: 33
 # IP-CIDR: 12
 # IP6-CIDR: 3
 # IP-ASN: 1
-# TOTAL: 43
+# TOTAL: 49
 HOST-SUFFIX,ads-twitter.com,X
 HOST-SUFFIX,cms-twdigitalassets.com,X
 HOST-SUFFIX,grok.com,X
+HOST-SUFFIX,grok.x.com,X
+HOST-SUFFIX,grokipedia.com,X
 HOST-SUFFIX,periscope.tv,X
 HOST-SUFFIX,pscp.tv,X
+HOST-SUFFIX,spacex.com,X
+HOST-SUFFIX,starlink.com,X
+HOST-SUFFIX,starshield.com,X
 HOST-SUFFIX,t.co,X
 HOST-SUFFIX,tellapart.com,X
 HOST-SUFFIX,tweetdeck.com,X
@@ -33,6 +38,7 @@ HOST-SUFFIX,twttr.com,X
 HOST-SUFFIX,twttr.net,X
 HOST-SUFFIX,twvid.com,X
 HOST-SUFFIX,vine.co,X
+HOST-SUFFIX,x.ai,X
 HOST-SUFFIX,x.com,X
 IP-CIDR,103.252.112.0/22,X
 IP-CIDR,104.244.42.0/24,X

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Musk / X 全家 rule sets (X/Twitter, Grok/xAI, SpaceX/Starlink) for Quantumult X and Loon.
+"""Build X 全家 rule sets (X/Twitter, Grok/xAI, SpaceX/Starlink) for Quantumult X and Loon.
 Tesla is deliberately EXCLUDED (Tesla China must go direct). Standard library only.
 Usage: python3 scripts/build.py
 """
@@ -195,14 +195,14 @@ def main():
     srcs = ["VPSDance/ai-proxy-rules", "blackmatrix7/ios_rule_script", "v2fly/domain-list-community", "RIPEstat (AS13414)", "manual"]
     xfull = normalise(x_src + ip_src)
     write("Grok", "Grok / xAI", [("Grok / xAI", grok)], srcs[:1] + srcs[2:3])
-    write("X", "X / Twitter domains + Twitter IP ranges", [("X / Twitter", xfull)], srcs[1:4])
+    write("Twitter", "X / Twitter domains + Twitter IP ranges", [("X / Twitter", xfull)], srcs[1:4])
     write("SpaceX", "SpaceX / Starlink / Starshield", [("SpaceX / Starlink", sp)], srcs[2:3] + srcs[4:])
-    total = write("Musk", "Musk / X 全家: Grok/xAI + X/Twitter + SpaceX/Starlink + Twitter IPs (no Tesla)",
+    total = write("X", "X 全家: Grok/xAI + X/Twitter + SpaceX/Starlink + Twitter IPs (no Tesla)",
                   [("Grok / xAI", grok), ("X / Twitter", xr), ("SpaceX / Starlink", sp), ("Twitter IP", ips)], srcs)
     bad = validate()
     if bad:
         sys.exit("INVALID LINES:\n" + "\n".join(bad))
-    print(f"OK: Musk.list={total} (grok={len(grok)} x={len(xr)} spacex={len(sp)} ip={len(ips)})")
+    print(f"OK: X.list={total} (grok={len(grok)} x={len(xr)} spacex={len(sp)} ip={len(ips)})")
 
 
 if __name__ == "__main__":
